@@ -1,0 +1,48 @@
+.container {
+  max-width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.gray-box {
+  box-shadow: 0 10px 15px #d3d8eb;
+  border-top: solid #e3e9ff 6px;
+  border-radius: 8px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  border-color: #e3e9ff;
+  margin-bottom: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+}
+
+.advert-txt {
+  width: 100%;
+  color: #95a5a6;
+  font-size: 12px;
+}
+
+.addvert-code {
+  width: 100%;
+}
+.justify-content-center {
+  -ms-flex-pack: center;
+  -webkit-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.d-flex,
+.slider-large.games-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
