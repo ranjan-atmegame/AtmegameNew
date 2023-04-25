@@ -1,16 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import loadable from "@loadable/component";
+
 //Component
-// import Layout from "./layo";
-
-// import Home from "./layo/Home";
-// import About from "./layo/About";
-// import Contact from "./layo/Contact";
-
-import Layout from "./containers/layout";
-import Home from "./containers/home";
-import Category from "./containers/category";
-import Sitemap from "./containers/Sitemap";
+const Layout = loadable(import("./containers/layout"));
+const Home = loadable(import("./containers/home"));
+const Category = loadable(import("./containers/category"));
 
 function App() {
   return (
@@ -19,7 +14,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category" element={<Category />} />
-          <Route path="/sitemap" element={<Sitemap />} />
         </Routes>
       </Layout>
     </Router>

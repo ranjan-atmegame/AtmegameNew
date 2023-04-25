@@ -1,9 +1,11 @@
 import { useState } from "react";
 
-import Header from "./partial/Header";
-import Menu from "./partial/Menu";
-import Sidebar from "./partial/Sidebar";
-import Footer from "./partial/Footer";
+import loadable from "@loadable/component";
+
+const Header = loadable(() => import("./partial/Header"));
+const Menu = loadable(() => import("./partial/Menu"));
+const Sidebar = loadable(() => import("./partial/Sidebar"));
+const Footer = loadable(() => import("./partial/Footer"));
 
 const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

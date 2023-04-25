@@ -1,8 +1,9 @@
 import { useLocation } from "react-router-dom";
 
+import loadable from "@loadable/component";
+
 import DomainAddSingle from "../../components/ad/DomainAdSingle";
-import A from "./section/A";
-import C from "./section/C";
+const A = loadable(() => import("./section/A"));
 
 const Home = (props) => {
   const location = useLocation();
@@ -10,9 +11,7 @@ const Home = (props) => {
   return (
     <>
       <DomainAddSingle path={location.pathname} />
-
       <A />
-      <C />
     </>
   );
 };
