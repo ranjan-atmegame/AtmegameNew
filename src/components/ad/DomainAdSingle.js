@@ -1,8 +1,12 @@
 import { Component } from "react";
 // import axios from "../../config/axios";
 
+import loadable from "@loadable/component";
+
 import { AdLarge, AdContainer, AdWrapper, AdText, AdCode } from "./AdStyles";
-import GoogleAd from "./GoogleAd";
+
+const GoogleAd = loadable(() => import("./GoogleAd"));
+// import GoogleAd from "./GoogleAd";
 // import "./ad.style.css";
 
 class DomainAddSingle extends Component {

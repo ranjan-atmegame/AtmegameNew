@@ -1,7 +1,7 @@
 import { GameWrapper } from "./GameStyled";
 
-const Cards = ({ children }) => {
+const Card = ({ children }) => {
   return <GameWrapper>{children}</GameWrapper>;
 };
 
-export default Cards;
+export default Card;
