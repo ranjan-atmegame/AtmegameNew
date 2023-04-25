@@ -22,7 +22,8 @@ const Games = ({ game }) => {
               src={`https://thumbs.atmegame.com/thumbs/${game.image}_thumb.jpg`}
               alt="Play Online Desert Champion Game"
               title="Play Online Desert Champion Game"
-              rel="preload"
+              // rel="preload"
+              loading="lazy"
             />
           </GameThumb>
           <GameDetail>
