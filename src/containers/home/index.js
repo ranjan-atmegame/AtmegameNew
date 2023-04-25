@@ -5,7 +5,7 @@ import loadable from "@loadable/component";
 import DomainAddSingle from "../../components/ad/DomainAdSingle";
 const A = loadable(() => import("./section/A"));
 
-const Home = (props) => {
+const Home = () => {
   const location = useLocation();
 
   return (

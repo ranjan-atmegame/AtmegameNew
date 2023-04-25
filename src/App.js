@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import loadable from "@loadable/component";
 
-//Component
-const Layout = loadable(import("./containers/layout"));
-const Home = loadable(import("./containers/home"));
-const Category = loadable(import("./containers/category"));
+// //Component
+const Layout = loadable(() => import("./containers/layout/index"));
+const Home = loadable(() => import("./containers/home/index"));
+const Category = loadable(() => import("./containers/category/index"));
 
 function App() {
   return (
