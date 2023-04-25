@@ -24,10 +24,6 @@ class GoogleAd extends Component {
 
     return (
       <div style={{ width: "100%" }}>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        ></script>
         {this.props.dataAdHost && (
           <ins
             key={path}
