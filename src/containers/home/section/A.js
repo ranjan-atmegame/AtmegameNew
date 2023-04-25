@@ -1,17 +1,18 @@
 import { useState, useEffect, useCallback } from "react";
 import axios from "../../../config/axios";
 
-import loadable from "@loadable/component";
+// import loadable from "@loadable/component";
+import { lazy } from "@loadable/component";
 
 import { Container } from "./HomeStyles";
 
-const Widget = loadable(() =>
+const Widget = lazy(() =>
   import("../../../components/Widget" /* webpackChunkName: "widget"  */)
 );
-const Card = loadable(() =>
+const Card = lazy(() =>
   import("../../../components/Card" /* webpackChunkName: "card"  */)
 );
-const Game = loadable(() =>
+const Game = lazy(() =>
   import("../../../components/Game" /* webpackChunkName: "game"  */)
 );
 

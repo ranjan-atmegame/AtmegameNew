@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import loadable from "@loadable/component";
+// import loadable from "@loadable/component";
+import { lazy } from "@loadable/component";
 
 // //Component
-const Layout = loadable(() => import("./containers/layout/index"));
-const Home = loadable(() => import("./containers/home/index"));
-const Category = loadable(() => import("./containers/category/index"));
+const Layout = lazy(() => import("./containers/layout/index"));
+const Home = lazy(() => import("./containers/home/index"));
+const Category = lazy(() => import("./containers/category/index"));
 
 function App() {
   return (
