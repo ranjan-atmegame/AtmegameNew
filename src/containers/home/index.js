@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import loadable from "@loadable/component";
 
 import DomainAddSingle from "../../components/ad/DomainAdSingle";
-const A = loadable(() => import("./section/A"));
+const A = loadable(() => import("./section/A" /* webpackChunkName: "home"  */));
 
 const Home = () => {
   const location = useLocation();

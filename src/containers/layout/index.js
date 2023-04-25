@@ -2,10 +2,18 @@ import { useState } from "react";
 
 import loadable from "@loadable/component";
 
-const Header = loadable(() => import("./partial/Header"));
-const Menu = loadable(() => import("./partial/Menu"));
-const Sidebar = loadable(() => import("./partial/Sidebar"));
-const Footer = loadable(() => import("./partial/Footer"));
+const Header = loadable(() =>
+  import("./partial/Header" /* webpackChunkName: "header"  */)
+);
+const Menu = loadable(() =>
+  import("./partial/Menu" /* webpackChunkName: "menu"  */)
+);
+// const Sidebar = loadable(() =>
+//   import("./partial/Sidebar" /* webpackChunkName: "sidebar"  */)
+// );
+// const Footer = loadable(() =>
+//   import("./partial/Footer" /* webpackChunkName: "footer"  */)
+// );
 
 const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -20,15 +28,15 @@ const Layout = ({ children }) => {
     <div className="wrapper">
       <Header toggleSidebar={toggleSidebar} />
       <Menu />
-      <Sidebar
+      {/* <Sidebar
         isSidebarOpen={isSidebarOpen}
         toggleSidebar={toggleSidebar}
         setIsSidebarOpen={setIsSidebarOpen}
-      />
+      /> */}
 
       {children}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
