@@ -1,5 +1,5 @@
 import { Component } from "react";
-import axios from "../../config/axios";
+// import axios from "../../config/axios";
 
 import { AdLarge, AdContainer, AdWrapper, AdText, AdCode } from "./AdStyles";
 import GoogleAd from "./GoogleAd";
@@ -9,9 +9,10 @@ class DomainAddSingle extends Component {
   state = { hostName: null, publisherId: null };
 
   fetchPublisherByHostName = async (hostName) => {
-    const response = await axios.get(`/publisher/${hostName}`);
+    // const response = await axios.get(`/publisher/${hostName}`);
 
-    return response.data.result;
+    // return response.data.result;
+    return null;
   };
 
   componentDidMount() {
