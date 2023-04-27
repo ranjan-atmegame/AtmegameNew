@@ -5,13 +5,14 @@ class GoogleAd extends Component {
     (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.path !== prevProps.path) {
-      if (window.adsbygoogle) {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   console.log('mount...')
+  //   if (this.props.path !== prevProps.path) {
+  //     if (window.adsbygoogle) {
+  //       (window.adsbygoogle = window.adsbygoogle || []).push({});
+  //     }
+  //   }
+  // }
 
   render() {
     const { googleAddId, slot, path } = this.props;
