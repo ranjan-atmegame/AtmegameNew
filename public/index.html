@@ -29,20 +29,30 @@
     <title>atmegame.com</title>
 
     <link
-      rel="apple-touch-icon"
-      href="https://image.atmegame.com/favicon.png"
-    />
-    <link
       rel="shortcut icon"
       type="image/x-icon"
       href="https://image.atmegame.com/favicon.png"
     />
 
+    <!-- Add script -->
     <script
-      defer
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      async
       src="https://www.googletagmanager.com/gtag/js?id=UA-78620721-1"
     ></script>
-    <script defer src="./js/dataLayer.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-78620721-1");
+    </script>
 
     <meta name="author" content="Apay Marketing" />
     <meta
@@ -86,31 +96,44 @@
         {
           "@context": "http://schema.org",
           "@type": "WebSite",
-          name: "Atmegame.com",
-          url: "https://www.atmegame.com/",
-          potentialAction: {
+          "name": "Atmegame.com",
+          "url": "https://www.atmegame.com/",
+          "potentialAction": {
             "@type": "SearchAction",
-            target:
-              "https://www.atmegame.com/search/?search_str={search_term_string}",
-            "query-input": "required name=search_term_string",
+            "target": "https://www.atmegame.com/search/?search_str={search_term_string}",
+            "query-input": "required name=search_term_string"
           },
-          publisher: {
+          "publisher": {
             "@type": "Organization",
-            name: "Apay Marketing",
-            url: "//atmegame.com/",
-            logo: {
+            "name": "Apay Marketing",
+            "url": "//atmegame.com/",
+            "logo": {
               "@type": "ImageObject",
-              url: "https://image.atmegame.com/logo.png",
-              width: 420,
-              height: 70,
-            },
-          },
-        },
-      ];
+              "url": "https://image.atmegame.com/logo.png",
+              "width": 420,
+              "height": 70
+            }
+          }
+        }
+      ]
     </script>
 
     <!-- Google Tag Manager -->
-    <script defer src="./js/tagManager.js"></script>
+    <script>
+      function reloadTagManagerScript(path) {
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-5FD9Q5Q");
+      }
+      reloadTagManagerScript("/");
+    </script>
     <!-- End Google Tag Manager -->
   </head>
   <body>
