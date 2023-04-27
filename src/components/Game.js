@@ -28,7 +28,7 @@ const Games = ({ game }) => {
           </GameThumb>
           <GameDetail>
             <GameName>
-              <h6>Desert Champion</h6>
+              <h6>{game.name}</h6>
               <GamePlayed>154.1K Played</GamePlayed>
             </GameName>
             <div className="arrow-btn">

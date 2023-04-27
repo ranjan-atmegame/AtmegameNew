@@ -26,7 +26,11 @@ const A = () => {
 
   const getAGames = useCallback(() => {
     return axios
-      .get("/home/a")
+      .get("/home/a", {
+        headers: {
+          "Cache-Control": 60 * 60,
+        },
+      })
       .then(({ data }) => {
         return data?.data ? data.data[0] : [];
       })
