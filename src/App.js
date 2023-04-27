@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// import loadable from "@loadable/component";
 import loadable from "@loadable/component";
 
 // //Component

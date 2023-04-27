@@ -1,11 +1,12 @@
 import { Component } from "react";
 // import axios from "../../config/axios";
 
-import loadable from "@loadable/component";
+// import loadable from "@loadable/component";
+import { lazy } from "@loadable/component";
 
 import { AdLarge, AdContainer, AdWrapper, AdText, AdCode } from "./AdStyles";
 
-const GoogleAd = loadable(() => import("./GoogleAd"));
+const GoogleAd = lazy(() => import("./GoogleAd"));
 // import GoogleAd from "./GoogleAd";
 // import "./ad.style.css";
 
